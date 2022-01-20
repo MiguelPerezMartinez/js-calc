@@ -1,0 +1,292 @@
+/*
+=======================================================================
+General styles
+=======================================================================
+*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  background-color: white;
+}
+
+body.dark {
+  background-color: rgba(51, 55, 80, 1);
+}
+
+body {
+  width: 300px;
+  min-height: 550px;
+  max-height: 550px;
+  margin: 0 auto;
+  margin-top: 20vh;
+  border-radius: 15px;
+  background-color: white;
+  border: 1px solid black;
+}
+
+header {
+  display: flex;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.window {
+  display:flex;
+  font-size: 10px;
+  color: rgb(77, 77, 77);
+  cursor:context-menu;
+}
+
+/*
+=======================================================================
+header buttons
+=======================================================================
+*/
+#red {
+  background-color: rgb(250, 93, 93);
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  align-self: center;
+  margin: 15px 5px 5px 15px;
+  padding:1px 4px;
+}
+
+#yellow {
+  background-color: rgb(248, 213, 96);
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  align-self: center;
+  margin: 15px 5px 5px 5px;
+  padding:1px 3px;
+}
+
+#green {
+  background-color: rgb(71, 177, 71);
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  align-self: center;
+  margin: 15px 5px 5px 5px;
+  padding:1px 6px;
+}
+
+#btnlog {
+  display: block;
+  background-color: rgb(221, 221, 221);
+  height: 15px;
+  padding: 0px 10px;
+  border-radius: 10px;
+  margin: 15px 5px 5px 40px;
+  font-size: 10px;
+  outline: none;
+  border: none;
+}
+
+/*
+=======================================================================
+The switch - the box around the slider
+=======================================================================
+*/
+
+/* The switch - the box around the slider */
+.switch {
+  position: absolute;
+  right: 0px;
+  display: inline-block;
+  width: 30px;
+  height: 15px;
+  align-self: center;
+  margin: 15px 15px 5px 5px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+  align-self: center;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  cursor:context-menu;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 15px;
+  width: 15px;
+  left: 0px;
+  bottom: 0px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: rgb(96, 233, 187);
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px rgb(96, 233, 187);
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(15px);
+  -ms-transform: translateX(15px);
+  transform: translateX(15px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+/*
+=======================================================================
+main
+=======================================================================
+*/
+
+.display {
+  width: 100%;
+  height: 90px;
+  display: flex;
+  align-items: flex-end;
+  background-color: rgb(241, 253, 249);
+  padding: 0px 10px;
+}
+
+.display input {
+  zoom:1;
+  max-zoom: 1;
+  min-zoom: 0.2;
+}
+
+.displaysmall {
+  width: 100%;
+  height: 30px;
+  display: flex;
+  align-items: flex-end;
+  background-color: rgb(241, 253, 249);
+  padding: 8px 20px;
+  /* line-height: 30px; */
+  margin-bottom: 5px;
+}
+
+#valorCuenta {
+  width: 100%;
+  text-align: right;
+  border-width: 0px;
+  background-color: rgb(241, 253, 249);
+  opacity:40%;
+}
+
+div.dark {
+  background-color: rgba(37, 41, 64, 1);
+  color: rgb(123, 211, 163);
+}
+
+#valorNumero {
+  width: 100%;
+  text-align: right;
+  font-size: 5rem;
+  background-color: rgba(0, 0, 0, 0);
+  border-width: 0px;
+}
+
+.buttons {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+input {
+  cursor:context-menu;
+  outline: none;
+  border: none;
+}
+
+.button {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
+
+input.dark {
+  color: rgb(123, 211, 163);
+  background-color: rgba(37, 41, 64, 1);
+}
+
+.lastrow div {
+  width: 25%;
+}
+
+.number {
+  background-color: rgb(241, 253, 249);
+}
+
+.darknumber {
+  background-color: rgba(51, 55, 80, 1);
+  color: rgb(207, 207, 207);
+}
+
+.calculadora {
+  display: none;
+}
+
+.log {
+  display: none;
+  padding: 15px;
+}
+
+.log ul {
+  width: 100%;
+  min-height: 475px;
+  max-height: 475px;
+  list-style: none;
+  overflow-y: scroll;
+  border-radius: 15px;
+}
+
+.log ul li {
+  padding: 5px 15px;
+  margin-bottom: 5px;
+  width: 98%;
+  border-radius: 15px;
+}
+
+.darklog {
+  background-color: rgba(37, 41, 64, 1);
+  color: rgb(207, 207, 207);
+}
+
+.show {
+  display: block;
+}

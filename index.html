@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=+, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>JS Calc</title>
+</head>
+
+<body>
+    <header>
+        <div class="window">
+            <div id="red">X</div>
+            <div id="yellow"></div>
+            <div id="green">-</div>
+        </div>
+        <button id="btnlog">Log console</button>
+        <div>
+            <label class="switch">
+                <input type="checkbox">
+                <span class="slider round"></span>
+            </label>
+        </div>
+    </header>
+    <main>
+        <div class="calculadora show">
+            <div class="displaysmall">
+                <input type="text" id="valorCuenta" maxlength="5" value="0" readonly>
+            </div>
+
+            <div class="display">
+                <input type="text" id="valorNumero" maxlength="5" value="0" readonly>
+            </div>
+
+            <div class="buttons">
+                <div class="row">
+                    <input class="button darkmode" type="button" value="C">
+                    <input class="button darkmode" type="button" value="±">
+                    <input class="button darkmode operation" type="button" value="%">
+                    <input class="button darkmode operation" type="button" value="÷">
+                </div>
+                <div class="row">
+                    <input class="button number" type="button" value="7">
+                    <input class="button number" type="button" value="8">
+                    <input class="button number" type="button" value="9">
+                    <input class="button darkmode operation" type="button" value="X">
+                </div>
+                <div class="row">
+                    <input class="button number" type="button" value="4">
+                    <input class="button number" type="button" value="5">
+                    <input class="button number" type="button" value="6">
+                    <input class="button darkmode operation" type="button" value="-">
+                </div>
+                <div class="row">
+                    <input class="button number" type="button" value="1">
+                    <input class="button number" type="button" value="2">
+                    <input class="button number" type="button" value="3">
+                    <input class="button darkmode operation" type="button" value="+">
+                </div>
+                <div class="row lastrow">
+                    <div><input class="button number" type="button" value="0"></div>
+                    <div><input class="button number" type="button" value="."></div>
+                    <div></div>
+                    <div><input class="button darkmode operation" style="background-color:rgb(123, 211, 163);"
+                            type="button" value="="></div>
+                </div>
+            </div>
+        </div>
+        <div class="log">
+            <ul id="operation">
+
+            </ul>
+        </div>
+    </main>
+
+    <script src="apps.js"></script>
+</body>
+
+</html>
